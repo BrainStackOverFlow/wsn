@@ -1,0 +1,22 @@
+[workspace]
+resolver = "3"
+members = ["wsn", "wsn-extract", "example"]
+
+[profile.dev]
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+[workspace.dependencies]
+no-panic = "0.1.36"
+anyhow = "1.0.102"
+proc-macro2 = "1.0.106"
+quote = "1.0.45"
+csv = "1.4.0"
+syn = "2.0.117"
+prettyplease = "0.2.37"
+clap = "4.6.1"
+goblin = "0.10.7"
+panic-never = "0.1.0"

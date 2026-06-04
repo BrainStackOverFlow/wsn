@@ -1,0 +1,19 @@
+[package]
+name = "wsn"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+no-panic = { workspace = true, optional = true }
+
+[features]
+no-panic = ["dep:no-panic"]
+ntdll = []
+
+[build-dependencies]
+anyhow.workspace = true
+proc-macro2.workspace = true
+quote.workspace = true
+csv.workspace = true
+syn.workspace = true
+prettyplease.workspace = true
