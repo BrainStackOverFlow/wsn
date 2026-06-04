@@ -19,8 +19,6 @@ fn main() -> Result<()> {
     let manifest_dir = PathBuf::from(env::var("CARGO_MANIFEST_DIR")?);
 
     let csv_dir = manifest_dir
-        .parent()
-        .context("crate has no parent directory")?
         .join("syscall_csvs");
 
     println!("cargo:rerun-if-changed={}", csv_dir.display());

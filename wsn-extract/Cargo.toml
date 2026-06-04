@@ -2,6 +2,9 @@
 name = "wsn-extract"
 version = "0.1.0"
 edition = "2024"
+repository = "https://github.com/BrainStackOverFlow/wsn"
+license-file = "../LICENSE"
+description = "CLI for Extracting Windows Syscalls Numbers from ntdll"
 
 [dependencies]
 anyhow = { workspace = true }

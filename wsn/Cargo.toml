@@ -2,6 +2,10 @@
 name = "wsn"
 version = "0.1.0"
 edition = "2024"
+repository = "https://github.com/BrainStackOverFlow/wsn"
+license-file = "../LICENSE"
+keywords = ["no-std", "no-panic"]
+description = "no-std no-panic Windows Syscalls Numbers library"
 
 [dependencies]
 no-panic = { workspace = true, optional = true }
