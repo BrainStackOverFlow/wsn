@@ -2,12 +2,22 @@
 resolver = "3"
 members = ["wsn", "wsn-extract", "example"]
 
-[profile.dev]
-
-[profile.release]
+[profile.dev-no-panic]
+inherits = "dev"
+opt-level = 1
 lto = "fat"
 codegen-units = 1
-panic = "abort"
+
+[profile.test-no-panic]
+inherits = "test"
+opt-level = 1
+lto = "fat"
+codegen-units = 1
+
+[profile.release-no-panic]
+inherits = "release"
+lto = "fat"
+codegen-units = 1
 
 [workspace.dependencies]
 no-panic = "0.1"
