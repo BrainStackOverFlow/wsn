@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["wsn", "wsn-extract", "example"]
+members = ["wsn", "wsn-extract", "example", "wdll", ]
 
 [profile.dev-no-panic]
 inherits = "dev"
@@ -19,7 +19,17 @@ inherits = "release"
 lto = "fat"
 codegen-units = 1
 
+[profile.dev-no-panic-no-std]
+inherits = "dev-no-panic"
+panic = "abort"
+
+[profile.release-no-panic-no-std]
+inherits = "release-no-panic"
+panic = "abort"
+
 [workspace.dependencies]
+wsn = { path = "wsn", version = "0.1" }
+wdll = { path = "wdll", version = "0.1" }
 no-panic = "0.1"
 anyhow = "1"
 proc-macro2 = "1"

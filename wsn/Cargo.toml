@@ -9,10 +9,11 @@ description = "no-std no-panic Windows Syscalls Numbers library"
 
 [dependencies]
 no-panic = { workspace = true, optional = true }
+wdll = {workspace = true, optional = true}
 
 [features]
-no-panic = ["dep:no-panic"]
-ntdll = []
+no-panic = ["dep:no-panic", "wdll?/no-panic"]
+wdll = ["dep:wdll"]
 
 [build-dependencies]
 anyhow.workspace = true

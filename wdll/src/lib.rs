@@ -1,3 +1,5 @@
+#![no_std]
+
 use core::arch::asm;
 use core::ptr::read_unaligned;
 
@@ -132,7 +134,7 @@ unsafe fn ntdll_fixed_file_info() -> usize {
 }
 
 #[cfg_attr(feature = "no-panic", no_panic::no_panic)]
-pub(crate) fn ntdll_build() -> u16 {
+pub fn ntdll_build() -> u16 {
     unsafe {
         let fixed_file_info = ntdll_fixed_file_info();
 

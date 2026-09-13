@@ -1,0 +1,11 @@
+[package]
+name = "wdll"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = []
+no-panic = ["dep:no-panic"]
+
+[dependencies]
+no-panic = { workspace = true, optional = true }

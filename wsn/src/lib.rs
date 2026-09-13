@@ -1,7 +1,7 @@
 #![no_std]
 
-#[cfg(feature = "ntdll")]
-mod ntdll;
+#[cfg(feature = "wdll")]
+use wdll;
 
 mod generated {
     include!(concat!(env!("OUT_DIR"), "/generated.rs"));
@@ -50,8 +50,8 @@ pub fn build_u16(build: u16) -> Option<WindowsBuild> {
     None
 }
 
-#[cfg(feature = "ntdll")]
+#[cfg(feature = "wdll")]
 #[cfg_attr(feature = "no-panic", no_panic::no_panic)]
 pub fn build_from_ntdll() -> Option<WindowsBuild> {
-    build_u16(ntdll::ntdll_build())
+    build_u16(wdll::ntdll_build())
 }

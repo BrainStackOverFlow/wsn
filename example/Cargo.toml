@@ -5,7 +5,7 @@ edition = "2024"
 publish = false
 
 [dependencies]
-wsn = { path = "../wsn", features = ["ntdll"] }
+wsn = { workspace = true, features = ["wdll"] }
 panic-never = { workspace = true }
 no-panic = { workspace = true, optional = true }
 
