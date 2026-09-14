@@ -6,6 +6,9 @@ edition = "2024"
 [features]
 default = []
 no-panic = ["dep:no-panic"]
+std = []
 
 [dependencies]
+thiserror = { workspace = true }
+widestring = { workspace = true }
 no-panic = { workspace = true, optional = true }
